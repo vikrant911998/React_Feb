@@ -1,0 +1,236 @@
+function demo(){
+    console.log('Declaration Style');
+}
+undefined
+var demo = function(){
+    console.log('Anonymous Style or Function Expression Style');
+}
+undefined
+var demo = ()=>{
+    console.log('Arrow Function');
+}
+undefined
+//Function Constructor
+undefined
+function Student(id,name){
+    this.id = id;
+    this.name = name;
+}
+undefined
+var obj = {
+    id:101,
+    name:'Vikrant'
+}
+undefined
+obj
+{id: 101, name: "Vikrant"}id: 101name: "Vikrant"__proto__: Object
+var obj1 = new Student(102,'Rahul');
+undefined
+obj1
+Student {id: 102, name: "Rahul"}id: 102name: "Rahul"__proto__: Object
+Object
+ƒ Object() { [native code] }
+Function
+ƒ Function() { [native code] }
+obj1 instanceof Student;
+true
+obj1 instanceof Object;
+true
+obj1 instanceof Function;
+false
+obj
+{id: 101, name: "Vikrant"}id: 101name: "Vikrant"__proto__: Objectconstructor: ƒ Object()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()hasOwnProperty: ƒ hasOwnProperty()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toString: ƒ toString()valueOf: ƒ valueOf()toLocaleString: ƒ toLocaleString()get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+console.dir(Student);
+VM1311:1 ƒ Student(id,name)length: 2name: "Student"arguments: nullcaller: nullprototype: {constructor: ƒ}__proto__: ƒ ()arguments: (...)caller: (...)length: 0name: ""constructor: ƒ Function()apply: ƒ apply()bind: ƒ bind()call: ƒ call()toString: ƒ toString()Symbol(Symbol.hasInstance): ƒ [Symbol.hasInstance]()get arguments: ƒ ()set arguments: ƒ ()get caller: ƒ ()set caller: ƒ ()__proto__: Object[[FunctionLocation]]: <unknown>[[Scopes]]: Scopes[0][[FunctionLocation]]: VM658:1[[Scopes]]: Scopes[1]
+undefined
+function Outer(){
+    function inner(){
+        console.log('Inner Function Callled...');
+    }
+
+    
+}
+undefined
+function Outer(){
+    function inner(){
+        console.log('Inner Function Callled...');
+    }
+
+    return inner;
+}
+undefined
+temp = Outer();
+ƒ inner(){
+        console.log('Inner Function Callled...');
+    }
+temp();
+VM1643:3 Inner Function Callled...
+undefined
+function Student(id,name){
+    this.id = id;
+    this.name = name;
+
+
+    this.display = function(){
+        console.log(this.id,this.name);
+    }
+}
+undefined
+var obj = new Student(101,"Vikrant");
+undefined
+obj
+Student {id: 101, name: "Vikrant", display: ƒ}id: 101name: "Vikrant"display: ƒ ()__proto__: Object
+obj.display();
+VM2121:7 101 "Vikrant"
+undefined
+obj1 = new Student(102,'Rahul');
+Student {id: 102, name: "Rahul", display: ƒ}id: 102name: "Rahul"display: ƒ ()__proto__: Object
+Student.prototype.display = function(){
+    console.log(this.id,this.name);
+}
+ƒ (){
+    console.log(this.id,this.name);
+}
+function Student(id,name){
+    this.id = id;
+    this.name = name;
+
+}
+undefined
+obj = new Student(101,'Vikrant');
+Student {id: 101, name: "Vikrant"}
+obj.displ
+undefined
+obj.display();
+VM2872:1 Uncaught TypeError: obj.display is not a function
+    at <anonymous>:1:5
+(anonymous) @ VM2872:1
+Student.prototype.display = function(){
+    console.log(this.id,this.name);
+}
+ƒ (){
+    console.log(this.id,this.name);
+}
+obj.display();
+VM2896:2 101 "Vikrant"
+undefined
+obj
+Student {id: 101, name: "Vikrant"}
+class Employee{
+    
+    constructor(id,name){
+        this.id = id;
+        this.name = name;
+    }
+    
+    show(){
+        console.log(this.id,this.name);
+    }
+}
+undefined
+obj = new Employee(101,'Vikas');
+Employee {id: 101, name: "Vikas"}id: 101name: "Vikas"__proto__: Object
+obj.show();
+VM3335:9 101 "Vikas"
+undefined
+Employee
+class Employee{
+    
+    constructor(id,name){
+        this.id = id;
+        this.name = name;
+    }
+    
+    show(){
+        console.log(this.id,this.name);
+    }
+}
+class PartTimeEmployee extends Employee{
+
+    void show2(){
+        console.log('SHow 2 of Child Class');
+    }
+}
+VM3774:3 Uncaught SyntaxError: Unexpected identifier
+class PartTimeEmployee extends Employee{
+
+    show2(){
+        console.log('SHow 2 of Child Class');
+    }
+}
+undefined
+class PartTimeEmployee extends Employee{
+
+    constructor(){
+
+    }
+
+    show2(){
+        console.log('SHow 2 of Child Class');
+    }
+}
+undefined
+class PartTimeEmployee extends Employee{
+
+    constructor(id,name){
+        super();
+    }
+
+    show2(){
+        console.log('SHow 2 of Child Class');
+    }
+}
+undefined
+class PartTimeEmployee extends Employee{
+
+    constructor(id,name){
+        
+    }
+
+    show2(){
+        console.log('SHow 2 of Child Class');
+    }
+}
+undefined
+class PartTimeEmployee extends Employee{
+
+    constructor(id,name){
+        super();
+    }
+
+    show2(){
+        console.log('SHow 2 of Child Class');
+    }
+}
+undefined
+obj = {
+    sid:102
+}
+{sid: 102}
+obj.name='Vikrant';
+"Vikrant"
+obj
+{sid: 102, name: "Vikrant"}
+class Player{
+
+    constructor(id,game){
+        this.id = id;
+        this.game = game;
+    }
+}
+undefined
+class Player{
+
+    constructor(id,game){
+        this.id = id;
+        this.game = game;
+        this.name = '';
+    }
+}
+undefined
+obj = new Player(1234,'Polo');
+Player {id: 1234, game: "Polo", name: ""}
+obj.name = 'Ralph';
+"Ralph"
+obj
+Player {id: 1234, game: "Polo", name: "Ralph"}
