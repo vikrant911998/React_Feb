@@ -1,0 +1,103 @@
+class Component{
+    constructor(){
+        this.props={};
+    }
+}
+
+class Like extends Component{
+    constructor(props){
+        
+    }
+}
+undefined
+class Component{
+    constructor(props){
+        this.props={props};
+    }
+}
+
+class Like extends Component{
+    constructor(props,id){
+        
+        this.id = id;
+    }
+}
+undefined
+obj = new Like(1201,121);
+VM619:10 Uncaught ReferenceError: Must call super constructor in derived class before accessing 'this' or returning from derived constructor
+    at new Like (<anonymous>:10:9)
+    at <anonymous>:1:7
+Like @ VM619:10
+(anonymous) @ VM705:1
+name = 'Vikrant';
+"Vikrant"
+function demo(){
+    console.log(this);
+}
+undefined
+demo();
+VM1224:2 Window {parent: Window, opener: null, top: Window, length: 0, frames: Window, …}
+undefined
+window.name 
+"Vikrant"
+ var obj = {
+    name:'Vikas'
+};
+undefined
+ var obj = {
+    name:'Vikas',
+    show:function(){
+        console.log(this.name);
+    }
+};
+undefined
+obj.show();
+VM1469:4 Vikas
+undefined
+demo();
+VM1224:2 Window {parent: Window, opener: null, top: Window, length: 0, frames: Window, …}
+undefined
+function demo(){
+    console.log(this.name);
+}
+undefined
+demo();
+VM1572:2 Vikrant
+undefined
+obj.show();
+VM1469:4 Vikas
+undefined
+//Apply Bind Call
+undefined
+console.dir(demo);
+VM1782:1 ƒ demo()length: 0name: "demo"arguments: nullcaller: nullprototype: {constructor: ƒ}__proto__: ƒ ()arguments: (...)caller: (...)length: 0name: ""constructor: ƒ Function()apply: ƒ apply()bind: ƒ bind()call: ƒ call()toString: ƒ toString()Symbol(Symbol.hasInstance): ƒ [Symbol.hasInstance]()get arguments: ƒ ()set arguments: ƒ ()get caller: ƒ ()set caller: ƒ ()__proto__: Object[[FunctionLocation]]: <unknown>[[Scopes]]: Scopes[0][[FunctionLocation]]: VM1572:1[[Scopes]]: Scopes[2]
+undefined
+demo.apply(obj);
+VM1572:2 Vikas
+undefined
+demo.call(obj);
+VM1572:2 Vikas
+undefined
+demo();
+VM1572:2 Vikrant
+undefined
+demo.bind(obj);
+ƒ demo(){
+    console.log(this.name);
+}
+temp = demo.bind(obj);
+ƒ demo(){
+    console.log(this.name);
+}
+demo();
+VM1572:2 Vikrant
+undefined
+temp();
+VM1572:2 Vikas
+undefined
+temp();
+VM1572:2 Vikas
+undefined
+temp();
+VM1572:2 Vikas
+undefined
